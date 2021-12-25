@@ -26,14 +26,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thetutlage/japa.git"
+    "url": "git+https://github.com/un-versed/japa.git"
   },
   "author": "virk",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thetutlage/japa/issues"
+    "url": "https://github.com/un-versed/japa/issues"
   },
-  "homepage": "https://github.com/thetutlage/japa#readme",
+  "homepage": "https://github.com/un-versed/japa#readme",
   "dependencies": {
     "chai": "^4.2.0",
     "chalk": "^4.0.0",
