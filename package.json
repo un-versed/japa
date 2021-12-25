@@ -1,5 +1,5 @@
 {
-  "name": "japa",
+  "name": "japa-unversed",
   "version": "4.0.0",
   "description": "Lean test runner for Node.js",
   "main": "build/index.js",
