@@ -1,6 +1,6 @@
 {
   "name": "japa-unversed",
-  "version": "4.2.0",
+  "version": "4.2.1",
   "description": "Lean test runner for Node.js",
   "main": "build/index.js",
   "files": [
