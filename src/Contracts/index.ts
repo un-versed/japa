@@ -80,6 +80,7 @@ export type IConfigureOptions = {
   after: ((runner, emitter) => Promise<void>)[],
   reporterFn: (emitter) => void,
   filter: (file: string) => void,
+  sort: (a: string, b: string) => number
 }
 
 /**

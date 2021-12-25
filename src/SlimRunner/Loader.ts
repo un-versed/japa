@@ -19,6 +19,7 @@
 export class Loader {
   private _glob: string[] | string
   private _filterFn: (file: string) => void
+  private _sortFn: (a: string, b: string) => number
 
   /**
    * Define the glob for the files
@@ -32,6 +33,13 @@ export class Loader {
    */
   public filter (cb: (file: string) => void) {
     this._filterFn = cb
+  }
+
+  /**
+   * Define a custom sorting function to filter files
+   */
+  public sort (cb: (a: string, b: string) => number) {
+    this._sortFn = cb
   }
 
   /**
@@ -56,6 +64,15 @@ export class Loader {
       filesPaths = filesPaths.filter((file) => this._filterFn(file))
     }
 
-    return filesPaths.sort()
+    /**
+     * If _sortFn is defined, then filter the files
+     */
+    if (typeof (this._sortFn) === 'function') {
+      filesPaths = filesPaths.sort(this._sortFn)
+    } else {
+      filesPaths.sort()
+    }
+
+    return filesPaths
   }
 }

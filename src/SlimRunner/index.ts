@@ -349,6 +349,13 @@ export namespace test {
     }
 
     /**
+     * Use files sort if defined as function
+     */
+    if (typeof (options.sort) === 'function') {
+      loader.sort(options.sort)
+    }
+
+    /**
      * Set after hooks
      */
     if (options.before) {
